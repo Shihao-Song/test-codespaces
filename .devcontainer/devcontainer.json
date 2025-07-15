@@ -1,12 +1,7 @@
 {
     "name": "LLVM Dev Environment",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-    "features": {
-        "ghcr.io/devcontainers/features/llvm:1": {
-            "version": "12"
-        },
-        "ghcr.io/devcontainers/features/cmake:1": {},
-        "ghcr.io/devcontainers/features/git:1": {}
+    "build": {
+        "dockerfile": "Dockerfile"
     },
     "customizations": {
         "vscode": {
