@@ -1,0 +1,95 @@
+Optimization Pass
+
+1. What is an optimization pass?
+|-----------|    |------------|    |------------------------------------------|    |-----------------------------|
+|-- Lexer --| -> |-- Parser --| -> |------------- Code Generation ------------| -> |-- Machine Code Generation --|
+|-----------|    |------------|    |-- Un-optimized Codes | Optimized Codes --|    |-----------------------------|
+                                   |------------------------------------------|
+
+2. What are un-optimized codes? 
+Any IRs that are directly translated from any high-level codes, i.e., IRs from the Code Generation project.
+
+3. What does "optimized" mean?
+Faster execution (speed), lower power consumption, etc.
+
+4. Loop unrolling (1) - Recap IRs
+----------------------------------------------------------
+-------------------- High-level Codes --------------------
+int main() 
+{
+    int sum = 0;
+
+    for (int i = 0; i < 1000000000; i = i + 1) {
+        sum = sum + 1;
+    }
+
+    printVarInt(sum);
+
+    return 0;
+}
+
+----------------------------------------------------------
+------------------------ IR Codes ------------------------
+; ModuleID = 'loop_unroll.bc'
+source_filename = "loop_unroll.txt"
+
+define i32 @main() {
+  %1 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  %2 = alloca i32, align 4
+  store i32 0, i32* %2, align 4
+  br label %main_loop_header
+
+main_loop_header:                                 ; preds = %main_loop_body, %0
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp slt i32 %3, 1000000000
+  br i1 %4, label %main_loop_body, label %main_after_loop
+
+main_loop_body:                                   ; preds = %main_loop_header
+  %5 = load i32, i32* %1, align 4
+  %6 = add i32 %5, 1
+  store i32 %6, i32* %1, align 4
+  %7 = load i32, i32* %2, align 4
+  %8 = add i32 %7, 1
+  store i32 %8, i32* %2, align 4
+  br label %main_loop_header
+
+main_after_loop:                                  ; preds = %main_loop_header
+  %9 = load i32, i32* %1, align 4
+  call void @printVarInt(i32 %9)
+  ret i32 0
+}
+
+declare void @printVarInt(i32)
+
+declare void @printVarFloat(float)
+
+----------------------------------------------------------
+----------------------------------------------------------
+
+5. Loop unrolling (2) - Motivation
+
+How much useful work (in terms of # instructions) is performed each iteration? 
+
+6. Demo (double screen)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

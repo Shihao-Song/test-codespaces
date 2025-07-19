@@ -1,0 +1,1060 @@
+{
+  Function Name: func1
+  Return Type: int
+  Arguments
+    int : x
+  Codes
+  {
+    {
+      [Return]
+      x
+    }
+  }
+}
+{
+  Function Name: func2
+  Return Type: int
+  Arguments
+    int : x
+    int : y
+  Codes
+  {
+    {
+      [Return]
+        x
+        +
+        y
+    }
+  }
+}
+{
+  Function Name: main
+  Return Type: int
+  Arguments
+    NONE
+  Codes
+  {
+    {
+      a
+      =
+      0
+    }
+    {
+      array
+      =
+        {
+          [ARRAY] 
+          [NUM ELEMENTS]
+          {
+            5
+          }
+          [ELEMENTS]
+          {
+            {
+              0
+            }
+            {
+              7
+            }
+            {
+              8
+            }
+            {
+              10
+            }
+            {
+              -5
+            }
+          }
+        }
+    }
+    {
+      a
+      =
+        {
+          [CALL] func1
+          [ARG 0]
+          {
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  1
+              }
+            }
+          }
+        }
+        +
+        3
+    }
+    {
+      a
+      =
+          0
+          -
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    2
+                }
+              }
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    3
+                }
+              }
+            }
+          }
+        *
+        6
+    }
+    {
+      a
+      =
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    0
+                }
+              }
+            }
+          }
+          +
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    1
+                }
+              }
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    4
+                }
+              }
+            }
+          }
+        /
+        2
+    }
+    {
+      a
+      =
+          0
+          -
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  {
+                    [CALL] func1
+                    [ARG 0]
+                    {
+                      2
+                    }
+                  }
+              }
+            }
+        +
+          5
+          *
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              3
+            }
+            [ARG 1]
+            {
+              4
+            }
+          }
+    }
+    {
+      a
+      =
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  2
+              }
+            }
+          +
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    3
+                }
+              }
+            }
+          }
+        *
+        {
+          [CALL] func2
+          [ARG 0]
+          {
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  1
+              }
+            }
+          }
+          [ARG 1]
+          {
+            0
+            -
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    4
+                }
+              }
+          }
+        }
+    }
+    {
+      a
+      =
+        {
+          [CALL] func2
+          [ARG 0]
+          {
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  {
+                    [CALL] func1
+                    [ARG 0]
+                    {
+                      1
+                    }
+                  }
+              }
+            }
+          }
+          [ARG 1]
+          {
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  3
+                  +
+                  1
+              }
+            }
+          }
+        }
+        /
+          {
+            [ARRAY] array
+            [INDEX]
+            {
+                2
+            }
+          }
+    }
+    {
+      a
+      =
+          0
+          -
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [CALL] func2
+                [ARG 0]
+                {
+                  {
+                    [ARRAY] array
+                    [INDEX]
+                    {
+                        0
+                    }
+                  }
+                }
+                [ARG 1]
+                {
+                  {
+                    [ARRAY] array
+                    [INDEX]
+                    {
+                        1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        +
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  2
+              }
+            }
+          *
+          3
+    }
+    {
+      a
+      =
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              0
+              -
+                {
+                  [ARRAY] array
+                  [INDEX]
+                  {
+                      1
+                  }
+                }
+            }
+          }
+          +
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              3
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    2
+                }
+              }
+            }
+          }
+        -
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    3
+                }
+              }
+            }
+          }
+          *
+          2
+    }
+    {
+      a
+      =
+        {
+          [CALL] func2
+          [ARG 0]
+          {
+            {
+              [CALL] func1
+              [ARG 0]
+              {
+                  {
+                    [ARRAY] array
+                    [INDEX]
+                    {
+                        0
+                    }
+                  }
+                +
+                  {
+                    [ARRAY] array
+                    [INDEX]
+                    {
+                        1
+                    }
+                  }
+              }
+            }
+          }
+          [ARG 1]
+          {
+            {
+              [CALL] func1
+              [ARG 0]
+              {
+                  {
+                    [ARRAY] array
+                    [INDEX]
+                    {
+                        2
+                    }
+                  }
+                *
+                  {
+                    [ARRAY] array
+                    [INDEX]
+                    {
+                        3
+                    }
+                  }
+              }
+            }
+          }
+        }
+    }
+    {
+      a
+      =
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    1
+                }
+              }
+            }
+          }
+          +
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              0
+              -
+                {
+                  [ARRAY] array
+                  [INDEX]
+                  {
+                      2
+                  }
+                }
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    3
+                }
+              }
+            }
+          }
+        *
+          0
+          -
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  4
+              }
+            }
+    }
+    {
+      a
+      =
+          0
+          -
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    1
+                }
+              }
+            }
+          }
+        +
+        {
+          [CALL] func2
+          [ARG 0]
+          {
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  2
+              }
+            }
+          }
+          [ARG 1]
+          {
+            0
+            -
+            {
+              [CALL] func1
+              [ARG 0]
+              {
+                {
+                  [ARRAY] array
+                  [INDEX]
+                  {
+                      3
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
+    {
+      a
+      =
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    0
+                }
+              }
+            }
+          }
+          -
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    1
+                }
+              }
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    2
+                }
+              }
+            }
+          }
+        *
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  3
+              }
+            }
+          /
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  4
+              }
+            }
+    }
+    {
+      a
+      =
+        {
+          [CALL] func1
+          [ARG 0]
+          {
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  {
+                    [CALL] func2
+                    [ARG 0]
+                    {
+                      1
+                    }
+                    [ARG 1]
+                    {
+                      2
+                    }
+                  }
+              }
+            }
+          }
+        }
+        *
+          0
+          -
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    3
+                }
+              }
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    4
+                }
+              }
+            }
+          }
+    }
+    {
+      a
+      =
+          0
+          -
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    1
+                }
+              }
+            }
+          }
+        *
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    2
+                }
+              }
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    3
+                }
+              }
+            }
+          }
+          -
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  4
+              }
+            }
+    }
+    {
+      a
+      =
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    0
+                }
+              }
+            }
+          }
+          +
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              0
+              -
+                {
+                  [ARRAY] array
+                  [INDEX]
+                  {
+                      1
+                  }
+                }
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    2
+                }
+              }
+            }
+          }
+        /
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  3
+              }
+            }
+          -
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    4
+                }
+              }
+            }
+          }
+    }
+    {
+      a
+      =
+        {
+          [CALL] func2
+          [ARG 0]
+          {
+            {
+              [CALL] func1
+              [ARG 0]
+              {
+                0
+                -
+                  {
+                    [ARRAY] array
+                    [INDEX]
+                    {
+                        0
+                    }
+                  }
+              }
+            }
+          }
+          [ARG 1]
+          {
+            {
+              [CALL] func1
+              [ARG 0]
+              {
+                {
+                  [ARRAY] array
+                  [INDEX]
+                  {
+                      1
+                  }
+                }
+              }
+            }
+          }
+        }
+        +
+        {
+          [CALL] func2
+          [ARG 0]
+          {
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  2
+              }
+            }
+          }
+          [ARG 1]
+          {
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  3
+              }
+            }
+          }
+        }
+    }
+    {
+      a
+      =
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    1
+                }
+              }
+            }
+          }
+          *
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    2
+                }
+              }
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    3
+                }
+              }
+            }
+          }
+        -
+        {
+          [CALL] func1
+          [ARG 0]
+          {
+            0
+            -
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    4
+                }
+              }
+          }
+        }
+    }
+    {
+      a
+      =
+        {
+          [CALL] func1
+          [ARG 0]
+          {
+            {
+              [ARRAY] array
+              [INDEX]
+              {
+                  2
+              }
+            }
+          }
+        }
+        +
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    3
+                }
+              }
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    4
+                }
+              }
+            }
+          }
+          /
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    1
+                }
+              }
+            }
+          }
+    }
+    {
+      a
+      =
+          0
+          -
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    0
+                }
+              }
+            }
+            [ARG 1]
+            {
+              {
+                [CALL] func1
+                [ARG 0]
+                {
+                    {
+                      [ARRAY] array
+                      [INDEX]
+                      {
+                          1
+                      }
+                    }
+                  +
+                    {
+                      [ARRAY] array
+                      [INDEX]
+                      {
+                          2
+                      }
+                    }
+                }
+              }
+            }
+          }
+        *
+          {
+            [ARRAY] array
+            [INDEX]
+            {
+                3
+            }
+          }
+    }
+    {
+      a
+      =
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    1
+                }
+              }
+            }
+          }
+          +
+          {
+            [CALL] func2
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    2
+                }
+              }
+            }
+            [ARG 1]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    3
+                }
+              }
+            }
+          }
+        *
+          0
+          -
+          {
+            [CALL] func1
+            [ARG 0]
+            {
+              {
+                [ARRAY] array
+                [INDEX]
+                {
+                    4
+                }
+              }
+            }
+          }
+    }
+  }
+}

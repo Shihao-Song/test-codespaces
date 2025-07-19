@@ -1,0 +1,59 @@
+----------------------------------------------------------
+-------------------- High-level Codes --------------------
+int main() 
+{
+    int sum = 0;
+
+    for (int i = 0; i < ????; i = i + 1) {
+        ?
+    }
+
+    printVarInt(sum);
+
+    return 0;
+}
+
+----------------------------------------------------------
+------------------------ IR Codes ------------------------
+; ModuleID = 'loop_unroll.bc'
+source_filename = "loop_unroll.txt"
+
+define i32 @main() {
+  %1 = alloca i32, align 4
+  store i32 0, i32* %1, align 4
+  %2 = alloca i32, align 4
+  store i32 0, i32* %2, align 4
+  br label %main_loop_header
+
+main_loop_header:                                 ; preds = %main_loop_body, %0
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp slt i32 %3, 250000000
+  br i1 %4, label %main_loop_body, label %main_after_loop
+
+main_loop_body:                                   ; preds = %main_loop_header
+  %5 = load i32, i32* %1, align 4
+  %6 = add i32 %5, 1
+  store i32 %6, i32* %1, align 4
+  %7 = load i32, i32* %1, align 4
+  %8 = add i32 %7, 1
+  store i32 %8, i32* %1, align 4
+  %9 = load i32, i32* %1, align 4
+  %10 = add i32 %9, 1
+  store i32 %10, i32* %1, align 4
+  %11 = load i32, i32* %1, align 4
+  %12 = add i32 %11, 1
+  store i32 %12, i32* %1, align 4
+  %13 = load i32, i32* %2, align 4
+  %14 = add i32 %13, 1
+  store i32 %14, i32* %2, align 4
+  br label %main_loop_header
+
+main_after_loop:                                  ; preds = %main_loop_header
+  %15 = load i32, i32* %1, align 4
+  call void @printVarInt(i32 %15)
+  ret i32 0
+}
+
+declare void @printVarInt(i32)
+
+declare void @printVarFloat(float)

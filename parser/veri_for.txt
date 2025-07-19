@@ -1,0 +1,61 @@
+
+// Function Definitions
+int func1(int x) {
+	return x;
+}
+
+int func2(int x, int y) {
+	return x + y;
+}
+
+int main()
+{
+	// Variable Definitions with Initial Values
+	int x = 1;
+	int y = 2;
+	int z = 3;
+	int a = 4;
+	int b = 5;
+	int c = 6;
+	int d = 7;
+	int e = 8;
+	int f = 9;
+	float g = 10.0;
+
+	// Array Definition with Initial Values
+	int array[5] = {0, 7, 8, 10, -5};
+
+
+	// Test Case 1: Simple loop with function calls
+	for (int i = func1(a); i < func2(b, c); i = i + 1) {
+		x = y + z;
+	}
+
+	// Test Case 2: Nested for loops with function calls
+	for (int i = 0; i < array[2]; i = i + 1) {
+		for (int k = func1(i); k < array[2]; k = k + 1) {
+			y = z * x;
+		}
+	}
+
+	// Test Case 4: For loop with a function call in the condition and arithmetic in the increment
+	for (int i = 0; func2(i, array[1]) < 100; i = i * 2 + 1) {
+
+		for (float j = 0.9; j < 10.0; j = j + 0.1)
+		{
+			g = g + j;
+		}
+
+		a = b - c;
+	}
+
+	// Test Case 5: For loop with no initialization
+	for (int i = func1(a); i < func2(b, c); i = i + array[1]) {
+		d = e + f;
+	}
+
+	// Test Case 10: For loop with array indexing in the initialization and condition
+	for (int i = array[0]; array[1] < 20; i = i + func1(i)) {
+		a = b * c;
+	}
+}

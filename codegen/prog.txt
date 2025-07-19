@@ -1,0 +1,27 @@
+int test(int sum)
+{
+    int new_sum = sum;
+
+    for (int i = 11; i < 21; i = i + 2)
+    {
+        new_sum = new_sum + 1;
+    }
+
+    return new_sum;
+}
+
+int main()
+{
+    int sum = 0;
+
+    for (int i = 21; i < 51; i = i + 3)
+    {
+        sum = sum + 1;
+    }
+
+    sum = test(sum);
+
+    printVarInt(sum);
+
+    return 0;
+}

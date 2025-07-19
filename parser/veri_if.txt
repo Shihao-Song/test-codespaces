@@ -1,0 +1,85 @@
+// Function Definitions
+int func1(int x) {
+	return x;
+}
+
+int func2(int x, int y) {
+	return x + y;
+}
+
+int main()
+{
+	// Variable Definitions with Initial Values
+	int x = 1;
+	int y = 2;
+	int z = 3;
+	int a = 4;
+	int b = 5;
+	int c = 6;
+	int d = 7;
+	int e = 8;
+	int f = 9;
+
+	// Array Definition with Initial Values
+	int array[5] = {0, 7, 8, 10, -5};
+
+
+	// Test Case 1: Complex condition with function call and pre-decrement
+	if (func1(x) * b < -a) {
+		x = a + b;
+	}
+
+	// Test Case 2: Complex condition with array indexing and post-increment
+	if (array[x] > func2(array[1], array[2])) {
+		y = array[0];
+	}
+
+	// Test Case 3: Complex condition with multiple operations
+	if ((x * y + z / a - b) / c == d) {
+		z = x * y;
+	}
+
+	// Test Case 4: Complex condition with nested function calls
+	if (func2(func1(x), func1(y)) <= (a * b + c / d)) {
+		a = func1(b);
+	}
+
+	// Test Case 5: Complex condition with mixed operators
+	if ((x + y * z - func2(a, b)) / (c - d + e) >= f) {
+		b = (x + y) * (z - a);
+	}
+
+	// Test Case 6: Complex condition with unary operations and function calls
+	if (-func1(x) + y > +z * func2(a, b)) {
+		c = y + z;
+	}
+
+	// Test Case 7: Complex condition with array indexing and mixed operators
+	if (array[(x * y) / 5] + func1(array[z]) < a * b - c / d) {
+		d = array[3] + e;
+	}
+
+	// Test Case 8: Complex condition with nested parentheses
+	if (((x + (y * (z - a))) / b) > (c - (d + e))) {
+		e = (f * (a + b)) - c;
+	}
+
+	if (x < y) {
+                float k = k + 1.0;
+
+		if (z > 0) {
+                        k = k + 1.0;
+			z = -z;
+		} else {
+			z = z + 2;
+		}
+	} else {
+		if (x == y) {
+			x = y + 1;
+		} else {
+			y = x - 1;
+		}
+	}
+
+}
+
